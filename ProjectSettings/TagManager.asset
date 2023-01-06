@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Road
+  - Enemy
+  - Spawn
+  - Tower
+  - Turret
+  - BasicTurret
+  - SlowyTurret
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - World
+  - Road
+  - End
+  - Actor
+  - Bullet
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: World
+    uniqueID: 4110167945
+    locked: 0
+  - name: Road
+    uniqueID: 2092852271
+    locked: 0
+  - name: End
+    uniqueID: 3856366155
+    locked: 0
+  - name: Bullet
+    uniqueID: 1743905891
+    locked: 0
+  - name: Actor
+    uniqueID: 3792187493
+    locked: 0
