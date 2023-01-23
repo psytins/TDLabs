@@ -38,8 +38,6 @@ public class HUDController : MonoBehaviour
         if (GameManager.instance.money >= turret.GetComponent<Turret>().cost)
         {
             GameManager.instance.addingTurret = turret;
-            GameManager.instance.money -= turret.GetComponent<Turret>().cost; 
-            UpdateMoney();
         }
     }
 

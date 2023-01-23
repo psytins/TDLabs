@@ -29,7 +29,10 @@ public class addTurret : MonoBehaviour
         if (occupied == false && GameManager.instance.addingTurret != null)
         {
             //Add turret
-            GameManager.instance.cloneTurret.transform.position = transform.position;     
+            GameManager.instance.cloneTurret.transform.position = transform.position; 
+            //Money out
+            GameManager.instance.money -= GameManager.instance.cloneTurret.GetComponent<Turret>().cost; 
+            HUDController.instance.UpdateMoney(); 
             //Enable colliger again
             GameManager.instance.cloneTurret.GetComponent<BoxCollider2D>().enabled = true;
             GameManager.instance.addingTurret.GetComponent<Turret>().inserting = false;

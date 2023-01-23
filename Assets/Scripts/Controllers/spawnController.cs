@@ -120,7 +120,7 @@ public class spawnController : MonoBehaviour
             //add here
 
         }
-        else if (GameManager.instance.currentWave == 80)
+        else if (GameManager.instance.currentWave == 80) // 80 rounds total
         {
             minionWeight = GameManager.instance.MinionWeightSpawn[80];
             shamaWeight = GameManager.instance.ShamaWeightSpawn[80];
