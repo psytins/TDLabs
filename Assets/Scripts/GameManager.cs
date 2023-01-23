@@ -39,6 +39,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void DiscardTurret(){
+        HUDController.instance.turretPanel.gameObject.SetActive(false);
+        //Give 20% RAM back
+        instance.money += (int)(instance.selectedTurret.GetComponent<Turret>().cost * 0.20f);
+        HUDController.instance.UpdateMoney();
+        //Destroy Turret
+        Destroy(instance.selectedTurret);
+    }
+    public void UpgradeTurret(){}
+
     //private void OnApplicationQuit()
     //{
     //    SaveState();

@@ -61,6 +61,15 @@ public class Turret : MonoBehaviour
         //Stop Shooting
         if(enemyQueue.Count == 0)
             gameObject.transform.GetChild(0).GetComponent<Animator>().SetBool("isShooting", false); //stop shooting
+
+        //Update Information -----------------
+        //Check Turret State (needs to be updated)
+        if(GameManager.instance.selectedTurret != null){
+            if(GameManager.instance.selectedTurret.transform.GetChild(0).GetComponent<Animator>().GetBool("isShooting"))
+                HUDController.instance.turretPanel.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "shooting";
+            else
+                HUDController.instance.turretPanel.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = "idle";
+        }
     }
 
     private void OnMouseDown() //Turret Selecion
@@ -77,17 +86,18 @@ public class Turret : MonoBehaviour
         }
         
         radiusCollider.GetComponent<SpriteRenderer>().enabled = true;
-        
+    
+        //Set information Panel ----------
         GameManager.instance.selectedTurret = this.gameObject;
 
-        TextMeshProUGUI turretName = HUDController.instance.turretPanel.gameObject.GetComponentInChildren(typeof(TextMeshProUGUI)) as TextMeshProUGUI;
+        TextMeshProUGUI turretName = HUDController.instance.turretPanel.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
+
         switch(this.gameObject.tag){
             case "BasicTurret": turretName.text = "Basic Turret"; break;
             case "SlowyTurret": turretName.text = "Slowy Turret"; break;
             default:break;
         }
         turretName.text += " #" + this.gameObject.transform.position.x + this.gameObject.transform.position.y;
-
         HUDController.instance.turretPanel.gameObject.SetActive(true);
     }
     private void TurretDeSelection(){
@@ -97,7 +107,7 @@ public class Turret : MonoBehaviour
 
         HUDController.instance.turretPanel.gameObject.SetActive(false);
     }
-
+    
     private void shootTurret()
     {
         //Shooting Animation
