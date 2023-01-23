@@ -20,7 +20,7 @@ public class HUDController : MonoBehaviour
     //Text Fields
     public Text healthInput, roundsInput, totalRounds, currencyInput, basicTurretCostInput, slowyTurretCostInput;
     //information related
-    public Image informationPanel;
+    public Image informationPanel,turretPanel;
     //Buttons
     public Button startButton, pauseButton, fastButton, fastFastButton;
     //Sprites

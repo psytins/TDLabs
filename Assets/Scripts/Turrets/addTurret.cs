@@ -45,6 +45,8 @@ public class addTurret : MonoBehaviour
         {
             //Add turret
             GameManager.instance.cloneTurret.transform.position = transform.position; 
+            //Disable radius
+            GameManager.instance.cloneTurret.GetComponent<Turret>().radiusCollider.GetComponent<SpriteRenderer>().enabled = false;
             //Money out
             GameManager.instance.money -= GameManager.instance.cloneTurret.GetComponent<Turret>().cost; 
             HUDController.instance.UpdateMoney(); 
@@ -54,7 +56,7 @@ public class addTurret : MonoBehaviour
             GameManager.instance.cloneTurret.GetComponent<Turret>().inserting = false;
             GameManager.instance.cloneTurret = null;
             GameManager.instance.addingTurret = null;
-            occupied = true;
+            occupied = true;            
         }
     }
 }

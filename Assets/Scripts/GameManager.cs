@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public GameObject addingTurret;
+    public GameObject selectedTurret;
     public GameObject cloneTurret;
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
         addingTurret = null;
+        selectedTurret = null;
         cloneTurret = null;
         //For turrets
         BasicTurret.inserting = false;

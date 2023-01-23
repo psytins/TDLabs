@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Turret : MonoBehaviour
 {
@@ -64,11 +65,37 @@ public class Turret : MonoBehaviour
 
     private void OnMouseDown() //Turret Selecion
     {
-        radiusCollider.GetComponent<SpriteRenderer>().enabled = true;
+        if(radiusCollider.GetComponent<SpriteRenderer>().enabled == true) //is selected
+            TurretDeSelection();
+        else if(radiusCollider.GetComponent<SpriteRenderer>().enabled == false) //is not selected
+            TurretSelection();
     }
-    private void OnMouseExit() //Exit Turret Selection 
-    {
+
+    private void TurretSelection(){
+        if(GameManager.instance.selectedTurret != null){//in case other turret is selected
+            GameManager.instance.selectedTurret.GetComponent<Turret>().TurretDeSelection();
+        }
+        
+        radiusCollider.GetComponent<SpriteRenderer>().enabled = true;
+        
+        GameManager.instance.selectedTurret = this.gameObject;
+
+        TextMeshProUGUI turretName = HUDController.instance.turretPanel.gameObject.GetComponentInChildren(typeof(TextMeshProUGUI)) as TextMeshProUGUI;
+        switch(this.gameObject.tag){
+            case "BasicTurret": turretName.text = "Basic Turret"; break;
+            case "SlowyTurret": turretName.text = "Slowy Turret"; break;
+            default:break;
+        }
+        turretName.text += " #" + this.gameObject.transform.position.x + this.gameObject.transform.position.y;
+
+        HUDController.instance.turretPanel.gameObject.SetActive(true);
+    }
+    private void TurretDeSelection(){
         radiusCollider.GetComponent<SpriteRenderer>().enabled = false;
+
+        GameManager.instance.selectedTurret = null;
+
+        HUDController.instance.turretPanel.gameObject.SetActive(false);
     }
 
     private void shootTurret()
