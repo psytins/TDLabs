@@ -9,6 +9,21 @@ public class addTurret : MonoBehaviour
     {
         occupied = false;
     }
+
+    private void Update() {
+        if (GameManager.instance.addingTurret != null){
+            if(Input.GetKeyDown(KeyCode.Escape)){
+                //Destroy current clone turret
+                Destroy(GameManager.instance.cloneTurret);
+                //Cancel adding
+                GameManager.instance.addingTurret.GetComponent<Turret>().inserting = false;
+                GameManager.instance.cloneTurret.GetComponent<Turret>().inserting = false;
+                GameManager.instance.cloneTurret = null;
+                GameManager.instance.addingTurret = null;   
+            }
+        }
+    }
+
     private void OnMouseEnter()
     {
         if (GameManager.instance.addingTurret != null)
