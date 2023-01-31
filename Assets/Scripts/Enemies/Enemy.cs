@@ -9,8 +9,13 @@ public class Enemy : EnemyMovement
     public float spawnCount;
     //----------------------
     //Métodos
-    public void hitEnemy(float damage, GameObject enemyTurret) 
+    public void hitEnemy(float damage, GameObject enemyTurret) // Hit enemy
     {
+        // Damage reduction - armor 
+        float damageReduction = 0; //in decimal percentage
+        damageReduction = (1 - (100 / (100 + this.armor))); //taken from here -> https://www.strategyzero.com/blog/2011/league-of-legends-armour-and-magic-resistance-damage-reduction/
+        damage = damage - (damage * damageReduction); 
+        //Apply damage to the enemy
         this.health -= damage;
         //Add turrets buffs on enemies
         switch (enemyTurret.tag)
