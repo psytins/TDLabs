@@ -38,14 +38,13 @@ public class spawnController : MonoBehaviour
             timer = timer - spawnDelay;
         }
 
-        if (GameManager.instance.EPT == 0)
+        if (GameManager.instance.EPT == 0)//end of the wave
         {
-            //end of the wave
             GameManager.instance.currentWave++;
             HUDController.instance.UpdateRounds();
             //reset wave
             WaveSetup();
-            GameManager.instance.startingHP = GameManager.instance.hp;
+            GameManager.instance.startingHP = GameManager.instance.hp; //set the HP to current HP
             GameManager.instance.enemyTotalHP = 0; //Vida acumulada dos inimigos que spawnam
             GameManager.instance.enemyAccumHP = 0; //Vida dos inimigos que chegam à torre
             //local reset
@@ -54,7 +53,6 @@ public class spawnController : MonoBehaviour
             timer = 0;
         }
     }
-
 
     private int SpawnUnit()
     {
@@ -177,23 +175,23 @@ public class spawnController : MonoBehaviour
         GameManager.instance.GoldMultiplier = 1;
         GameManager.instance.SpawnMultiplier = 1;
         //Enemy Setup
-        GameManager.instance.EPT = 20;
+        GameManager.instance.EPT = 20; //start with 20 enemies in the first round
 
         //Debug Area --------------------------------------------------------------------------------------------------------------------
-        //Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
-        //Debug.Log("Starting Health = " + GameManager.instance.startingHP);
-        //Debug.Log("Enemies’ Health Total = " + GameManager.instance.enemyTotalHP);
-        //Debug.Log("Enemies’ Health Acc = " + GameManager.instance.enemyAccumHP);
-        //Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
-        //Debug.Log("New EPT = " + GameManager.instance.EPT);
-        //Debug.Log("------------- Variables And Multipliers ------------ - ");
-        //Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
-        //Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
-        //Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
-        //Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
-        //Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
-        //Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
-        //Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
+        Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
+        Debug.Log("Starting Health = " + GameManager.instance.startingHP);
+        Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP);
+        Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP);
+        Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
+        Debug.Log("New EPT = " + GameManager.instance.EPT);
+        Debug.Log("------------- Variables And Multipliers ------------ - ");
+        Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
+        Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
+        Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
+        Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
+        Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
+        Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
+        Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
     }
 
     //Called in the end of each wave
@@ -303,8 +301,11 @@ public class spawnController : MonoBehaviour
         GameManager.instance.GoldPoint = GameManager.instance.GoldPoint * GameManager.instance.GoldMultiplier;
         //Status Point Related - Every Enemy (I changed a bit)
         //Minion
-        //GameManager.instance.MinionMonster.health = GameManager.instance.MinionMonster.health + (GameManager.instance.StatusPoint + (20 * (GameManager.instance.DPG / 100)));
-        //GameManager.instance.MinionMonster.armor = GameManager.instance.MinionMonster.armor + ((GameManager.instance.StatusPoint/4) + (20 * (GameManager.instance.DPG / 100)));
+        GameManager.instance.MinionMonster.health = GameManager.instance.MinionMonster.health + (GameManager.instance.StatusPoint + (20 * (GameManager.instance.DPG / 100)));
+        GameManager.instance.MinionMonster.armor = GameManager.instance.MinionMonster.armor + ((GameManager.instance.StatusPoint/4) + (20 * (GameManager.instance.DPG / 100)));
+        //Shama
+        GameManager.instance.ShamaMonster.health = GameManager.instance.ShamaMonster.health + (GameManager.instance.StatusPoint + (20 * (GameManager.instance.DPG / 100)));
+        GameManager.instance.ShamaMonster.armor = GameManager.instance.ShamaMonster.armor + ((GameManager.instance.StatusPoint/4) + (20 * (GameManager.instance.DPG / 100)));
         //...
         //Gold Point Related    
         GameManager.instance.BonusGold = Mathf.RoundToInt((50 * (GameManager.instance.DPG / 100)) + GameManager.instance.GoldPoint * 2);
@@ -314,23 +315,27 @@ public class spawnController : MonoBehaviour
         GameManager.instance.EPT = Mathf.RoundToInt( 20 + (30 * (GameManager.instance.DPG / 100) ) + GameManager.instance.SpawnPoint );
 
         //Debug Area --------------------------------------------------------------------------------------------------------------------
-        //Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
-        //Debug.Log("Health Loss = " + healthLoss);
-        //Debug.Log("Enemies’ Health Total = " + GameManager.instance.enemyTotalHP); //Bug 
-        //Debug.Log("Enemies’ Health Acc = " + GameManager.instance.enemyAccumHP); //Bug
-        //Debug.Log("Enemies’ Health Remaining = " + EHR + "%");
-        //Debug.Log("Minions’ Health = " + GameManager.instance.MinionMonster.health);
-        //Debug.Log("Minions’ Armor = " + GameManager.instance.MinionMonster.armor);
-        //Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
-        //Debug.Log("New EPT = " + GameManager.instance.EPT);
-        //Debug.Log("------------- Variables And Multipliers ------------ - ");
-        //Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
-        //Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
-        //Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
-        //Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
-        //Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
-        //Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
-        //Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
+        Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
+        Debug.Log("Health Loss = " + healthLoss);
+        Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP); //Bug ? 
+        Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP); //Bug ?
+        Debug.Log("Enemies Health Remaining = " + EHR + "%");
+        Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
+        Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
+        Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
+        Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
+        Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
+        Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
+        Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
+        Debug.Log("New EPT = " + GameManager.instance.EPT);
+        Debug.Log("------------- Variables And Multipliers ------------ - ");
+        Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
+        Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
+        Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
+        Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
+        Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
+        Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
+        Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
     }
 
 }
