@@ -181,7 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   atkPerSecond: 10
-  range: 3
+  range: 2
   cost: 50
   inserting: 0
   enemyQueue: []
