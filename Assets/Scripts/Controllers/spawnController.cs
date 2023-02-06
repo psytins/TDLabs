@@ -13,11 +13,22 @@ public class spawnController : MonoBehaviour
 
     private void Start()
     {
+        //!! 
+        ResetEnemyComponent();
+        //-------------------------------
         FirstSetup();
         enemyCount = 0;
         enemyTotal = GameManager.instance.EPT;
         spawnDelay = 1f;
     } 
+
+    private void ResetEnemyComponent(){ // !! To reset enemies variables each time I run the Game mode in unity --- Maybe don't need in future
+        GameManager.instance.currentWave = 1;
+        GameObject unit1 = Instantiate(enemies[0], new Vector2(-5.5f, -3.5f), Quaternion.identity);
+        GameObject unit2 = Instantiate(enemies[1], new Vector2(-4.5f, -3.5f), Quaternion.identity);
+        Destroy(unit1);
+        Destroy(unit2);
+    }
 
     //Update is called once per frame
     void FixedUpdate()
