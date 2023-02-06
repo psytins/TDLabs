@@ -9,7 +9,6 @@ This game is a [Tower Defense Game](https://en.wikipedia.org/wiki/Tower_defense)
 The main story behind the game is that this private lab company is testing weapons with the goal of enhancing their product to achieve higher success.
 
 ## Some pictures of the game
-
 ### Start Menu
 ![Start Menu 01](images-github/start-menu-01.PNG)
 --
