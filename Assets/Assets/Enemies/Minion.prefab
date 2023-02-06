@@ -147,11 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b7dfe88992614479dd40dcf172ddc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  health: 50
-  armor: 10
-  rpk: 2
-  spawnCount: 1
+  speed: 0
+  health: 0
+  armor: 0
+  rpk: 0
+  spawnCount: 0
 --- !u!95 &1850156820209944981
 Animator:
   serializedVersion: 4

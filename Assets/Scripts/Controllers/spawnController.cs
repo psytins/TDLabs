@@ -17,9 +17,9 @@ public class spawnController : MonoBehaviour
         enemyCount = 0;
         enemyTotal = GameManager.instance.EPT;
         spawnDelay = 1f;
-    }
+    } 
 
-// Update is called once per frame
+    //Update is called once per frame
     void FixedUpdate()
     {
         timer += Time.deltaTime;
@@ -192,6 +192,14 @@ public class spawnController : MonoBehaviour
         Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
         Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
         Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
+        Debug.Log("--------------- Minion Monster ---------------------");
+        Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
+        Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
+        Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
+        Debug.Log("--------------- Shama Monster ---------------------");
+        Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
+        Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
+        Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
     }
 
     //Called in the end of each wave
@@ -320,12 +328,6 @@ public class spawnController : MonoBehaviour
         Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP); //Bug ? 
         Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP); //Bug ?
         Debug.Log("Enemies Health Remaining = " + EHR + "%");
-        Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
-        Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
-        Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
-        Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
-        Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
-        Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
         Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
         Debug.Log("New EPT = " + GameManager.instance.EPT);
         Debug.Log("------------- Variables And Multipliers ------------ - ");
@@ -336,6 +338,15 @@ public class spawnController : MonoBehaviour
         Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
         Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
         Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
+        Debug.Log("--------------- Minion Monster ---------------------");
+        Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
+        Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
+        Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
+        Debug.Log("--------------- Shama Monster ---------------------");
+        Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
+        Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
+        Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
+
     }
 
 }

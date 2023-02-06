@@ -23,7 +23,7 @@ public class Enemy : EnemyMovement
             case "BasicTurret": //No buffs
                 break;
             case "SlowyTurret": //Freeze enemies
-                this.speed = this.speed - (this.speed * 0.03f); //Slow enemy by 3% for each hit
+                this.speed = this.speed - (this.speed * 0.20f); //Slow enemy by 20% for each hit
                 break;
         }
         if(health <= 0.0f)
