@@ -24,6 +24,9 @@ The main story behind the game is that this private lab company is testing weapo
 --
 ![In-Game 04](images-github/in-game-04.PNG)
 
+### Dynamic Difficulty Adjustment
+![DDA 01](images-github/DDA-01.PNG)
+
 ## Notes
 - This is my first relatively big game development project, so I'm not trying to create the perfect game, just something.
 - All of the game assets are created by me.
