@@ -8,14 +8,14 @@ This game is a [Tower Defense Game](https://en.wikipedia.org/wiki/Tower_defense)
 
 The main story behind the game is that this private lab company is testing weapons with the goal of enhancing their product to achieve higher success.
 
-## Some pictures of the game: 
+## Some pictures of the game
 
-### Start Menu:
+### Start Menu
 ![Start Menu 01](images-github/start-menu-01.PNG)
 --
 ![Start Menu 02](images-github/start-menu-02.PNG)
 
-### In Game:
+### In Game
 ![In-Game 01](images-github/in-game-01.PNG)
 --
 ![In-Game 02](images-github/in-game-02.PNG)
@@ -24,7 +24,7 @@ The main story behind the game is that this private lab company is testing weapo
 --
 ![In-Game 04](images-github/in-game-04.PNG)
 
-## Notes:
+## Notes
 - This is my first relatively big game development project, so I'm not trying to create the perfect game, just something.
 - All of the game assets are created by me.
 
