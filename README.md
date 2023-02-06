@@ -25,6 +25,7 @@ The main story behind the game is that this private lab company is testing weapo
 
 ### Dynamic Difficulty Adjustment
 ![DDA 01](images-github/DDA-01.PNG)
+![DDA 02](images-github/DDA-02.PNG)
 
 ## References
 ### Dynamic Difficulty Adjustment
