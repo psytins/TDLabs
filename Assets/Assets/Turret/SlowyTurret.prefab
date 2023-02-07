@@ -158,10 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3579791747cb4e04db8d714314334061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  atkPerSecond: 1
+  damage: 3
+  atkPerSecond: 3
   range: 3
-  cost: 25
+  cost: 65
   inserting: 0
   enemyQueue: []
   bullet: {fileID: 7781062729587037089, guid: 5a195fae0e01e0049a8331606e46dcb4, type: 3}

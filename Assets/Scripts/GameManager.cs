@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -40,12 +41,16 @@ public class GameManager : MonoBehaviour
     }
 
     public void DiscardTurret(){
-        HUDController.instance.turretPanel.gameObject.SetActive(false);
-        //Give 20% RAM back
-        instance.money += (int)(instance.selectedTurret.GetComponent<Turret>().cost * 0.20f);
-        HUDController.instance.UpdateMoney();
-        //Destroy Turret
-        Destroy(instance.selectedTurret);
+        //You can only discar a turret if is idle
+        if(HUDController.instance.turretPanel.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text == "idle"){
+            HUDController.instance.turretPanel.gameObject.SetActive(false);
+            //Give 65% RAM back
+            instance.money += Mathf.FloorToInt(instance.selectedTurret.GetComponent<Turret>().cost * 0.65f);
+            HUDController.instance.UpdateMoney();
+            //Destroy Turret
+            Destroy(instance.selectedTurret);
+        } 
+        else {/*do nothing*/}
     }
     public void UpgradeTurret(){}
 

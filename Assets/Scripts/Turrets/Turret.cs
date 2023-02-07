@@ -87,7 +87,7 @@ public class Turret : MonoBehaviour
         
         radiusCollider.GetComponent<SpriteRenderer>().enabled = true;
     
-        //Set information Panel ----------
+        //Set information Panel ---------- (only static information)
         GameManager.instance.selectedTurret = this.gameObject;
 
         TextMeshProUGUI turretName = HUDController.instance.turretPanel.gameObject.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
