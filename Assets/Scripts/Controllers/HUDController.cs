@@ -14,7 +14,7 @@ public class HUDController : MonoBehaviour
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     //Text Fields
@@ -22,7 +22,7 @@ public class HUDController : MonoBehaviour
     //information related
     public Image informationPanel,turretPanel;
     //Buttons
-    public Button startButton, pauseButton, fastButton, fastFastButton;
+    public Button startButton, pauseButton, fastButton, fastFastButton, restartButton;
     //Sprites
     public Sprite pauseSprite, resumeSprite;
     private void Start()
@@ -60,6 +60,7 @@ public class HUDController : MonoBehaviour
         pauseButton.gameObject.SetActive(true);
         fastButton.gameObject.SetActive(true);
         fastFastButton.gameObject.SetActive(true);
+        restartButton.gameObject.SetActive(true);
     }
 
     public void pauseGame()

@@ -14,6 +14,8 @@ public class SceneLoader : MonoBehaviour
     //Play
     public void LoadScene(int index)
     {
+        //make sure time is equal to 1
+        Time.timeScale = 1f;
         StartCoroutine(LoadScene_Coroutine(index));
     }
 

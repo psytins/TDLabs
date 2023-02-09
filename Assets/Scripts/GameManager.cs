@@ -25,19 +25,12 @@ public class GameManager : MonoBehaviour
         SlowyTurret.inserting = false;
         //add here
         LoadState();
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
    
     private void Start()
     {
         Spawn.SetActive(false);
-    }
-
-    public void PlayGame()
-    {
-        //Load Game Scene 
-
-        
     }
 
     public void DiscardTurret(){
