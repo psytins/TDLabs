@@ -320,18 +320,18 @@ public class spawnController : MonoBehaviour
         GameManager.instance.GoldPoint = GameManager.instance.GoldPoint * GameManager.instance.GoldMultiplier;
         //Status Point Related - Every Enemy (I changed a bit)
         //Minion
-        GameManager.instance.MinionMonster.health = GameManager.instance.MinionMonster.health + (GameManager.instance.StatusPoint + (20 * (GameManager.instance.DPG / 100)));
-        GameManager.instance.MinionMonster.armor = GameManager.instance.MinionMonster.armor + ((GameManager.instance.StatusPoint/4) + (20 * (GameManager.instance.DPG / 100)));
+        GameManager.instance.MinionMonster.health = (GameManager.instance.MinionMonster.health + GameManager.instance.StatusPoint) + (20 * (GameManager.instance.DPG / 100));
+        GameManager.instance.MinionMonster.armor = (GameManager.instance.MinionMonster.armor + (GameManager.instance.StatusPoint/4)) + (20 * (GameManager.instance.DPG / 100));
         //Shama
-        GameManager.instance.ShamaMonster.health = GameManager.instance.ShamaMonster.health + (GameManager.instance.StatusPoint + (20 * (GameManager.instance.DPG / 100)));
-        GameManager.instance.ShamaMonster.armor = GameManager.instance.ShamaMonster.armor + ((GameManager.instance.StatusPoint/4) + (20 * (GameManager.instance.DPG / 100)));
+        GameManager.instance.ShamaMonster.health = (GameManager.instance.ShamaMonster.health + GameManager.instance.StatusPoint) + (20 * (GameManager.instance.DPG / 100));
+        GameManager.instance.ShamaMonster.armor = (GameManager.instance.ShamaMonster.armor + (GameManager.instance.StatusPoint/4)) + (20 * (GameManager.instance.DPG / 100));
         //...
         //Gold Point Related    
-        GameManager.instance.BonusGold = Mathf.RoundToInt((50 * (GameManager.instance.DPG / 100)) + GameManager.instance.GoldPoint * 2);
+        GameManager.instance.BonusGold = Mathf.RoundToInt((50 * (GameManager.instance.DPG / 100)) + GameManager.instance.GoldPoint * 64);
         GameManager.instance.money = GameManager.instance.money + GameManager.instance.BonusGold;
         HUDController.instance.UpdateMoney(); //For HUD 
         //Spawn Point Related 
-        GameManager.instance.EPT = Mathf.RoundToInt( 20 + (30 * (GameManager.instance.DPG / 100) ) + GameManager.instance.SpawnPoint );
+        GameManager.instance.EPT = Mathf.RoundToInt( 20 + (30 * (GameManager.instance.DPG / 100) ) + GameManager.instance.SpawnPoint);
 
         //Debug Area --------------------------------------------------------------------------------------------------------------------
         Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");

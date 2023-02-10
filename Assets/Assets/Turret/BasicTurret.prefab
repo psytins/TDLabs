@@ -182,7 +182,7 @@ MonoBehaviour:
   damage: 5
   atkPerSecond: 10
   range: 2
-  cost: 85
+  cost: 250
   inserting: 0
   enemyQueue: []
   bullet: {fileID: 7781062729587037089, guid: 28e97f9527c83054d874e66b8d4c824c, type: 3}

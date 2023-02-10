@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour
         //money = int.Parse(data[1]);
         //Game Logic Init -------------------------------------------------
         hp = 100; //temp
-        money = 100; //temp
+        money = 650; //temp
 
         //Set Weithgts for enemies
         MinionWeightSpawn = new Dictionary<int, float>()

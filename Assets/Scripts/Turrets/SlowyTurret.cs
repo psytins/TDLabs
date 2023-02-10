@@ -10,6 +10,6 @@ public class SlowyTurret : Turret
         GameManager.instance.SlowyTurret.damage = 3;
         GameManager.instance.SlowyTurret.atkPerSecond = 3; 
         GameManager.instance.SlowyTurret.range = 3; 
-        GameManager.instance.SlowyTurret.cost = 65; 
+        GameManager.instance.SlowyTurret.cost = 400; 
     }
 }
