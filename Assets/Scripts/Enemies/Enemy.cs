@@ -8,7 +8,7 @@ public class Enemy : EnemyMovement
     public int rpk; //reward per kill
     public float spawnCount;
     //----------------------
-    //Métodos
+    //Métodos    
     public void hitEnemy(float damage, GameObject enemyTurret) // Hit enemy
     {
         // Damage reduction - armor 
@@ -26,7 +26,8 @@ public class Enemy : EnemyMovement
                 this.speed = this.speed - (this.speed * 0.05f); //Slow enemy by 5% for each hit
                 break;
         }
-        if(health < 1f)
+
+        if(health < 1f && wasInvoked == false)
         {
             //Retirar da Enemy Queue
             enemyTurret.GetComponent<Turret>().enemyQueue.Remove(this.gameObject);
@@ -37,6 +38,8 @@ public class Enemy : EnemyMovement
             HUDController.instance.UpdateMoney();
             //Inimigo morre
             Destroy(this.gameObject);
+
+            wasInvoked = true;
         }
     }
 }

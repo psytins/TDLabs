@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    //Controll
+    public bool wasInvoked; //when two turrets hit the same target at tthe same time, prevent hit function run 2 times 
     //Movement Parameter
     public float speed;
 
@@ -22,6 +24,8 @@ public class EnemyMovement : MonoBehaviour
         //Inicial Direction
         direction = -2;
         transform.eulerAngles = Vector3.forward * 90 * -1;
+
+        wasInvoked = false;
     }
 
     // Update is called once per frame
