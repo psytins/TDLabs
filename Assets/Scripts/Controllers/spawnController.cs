@@ -189,28 +189,28 @@ public class spawnController : MonoBehaviour
         GameManager.instance.EPT = 20; //start with 20 enemies in the first round
 
         //Debug Area --------------------------------------------------------------------------------------------------------------------
-        Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
-        Debug.Log("Starting Health = " + GameManager.instance.startingHP);
-        Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP);
-        Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP);
-        Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
-        Debug.Log("New EPT = " + GameManager.instance.EPT);
-        Debug.Log("------------- Variables And Multipliers ------------ - ");
-        Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
-        Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
-        Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
-        Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
-        Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
-        Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
-        Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
-        Debug.Log("--------------- Minion Monster ---------------------");
-        Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
-        Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
-        Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
-        Debug.Log("--------------- Shama Monster ---------------------");
-        Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
-        Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
-        Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
+        // Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
+        // Debug.Log("Starting Health = " + GameManager.instance.startingHP);
+        // Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP);
+        // Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP);
+        // Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
+        // Debug.Log("New EPT = " + GameManager.instance.EPT);
+        // Debug.Log("------------- Variables And Multipliers ------------ - ");
+        // Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
+        // Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
+        // Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
+        // Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
+        // Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
+        // Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
+        // Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
+        // Debug.Log("--------------- Minion Monster ---------------------");
+        // Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
+        // Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
+        // Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
+        // Debug.Log("--------------- Shama Monster ---------------------");
+        // Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
+        // Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
+        // Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
     }
 
     //Called in the end of each wave
@@ -339,24 +339,25 @@ public class spawnController : MonoBehaviour
         Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP); //Bug ? 
         Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP); //Bug ?
         Debug.Log("Enemies Health Remaining = " + EHR + "%");
-        Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
+        // Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
         Debug.Log("New EPT = " + GameManager.instance.EPT);
-        Debug.Log("------------- Variables And Multipliers ------------ - ");
-        Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
-        Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
-        Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
-        Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
-        Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
-        Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
-        Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
-        Debug.Log("--------------- Minion Monster ---------------------");
-        Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
-        Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
-        Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
-        Debug.Log("--------------- Shama Monster ---------------------");
-        Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
-        Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
-        Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
+        Debug.Log("\n\n");
+        // Debug.Log("------------- Variables And Multipliers ------------ - ");
+        // Debug.Log("Difficulty Point Global = " + GameManager.instance.DPG);
+        // Debug.Log("Status Point = " + GameManager.instance.StatusPoint);
+        // Debug.Log("Status Multiplier = " + GameManager.instance.StatusMultiplier);
+        // Debug.Log("Spawn Point = " + GameManager.instance.SpawnPoint);
+        // Debug.Log("Spawn Multiplier = " + GameManager.instance.SpawnMultiplier);
+        // Debug.Log("Gold Point = " + GameManager.instance.GoldPoint);
+        // Debug.Log("Gold Multiplier = " + GameManager.instance.GoldMultiplier);
+        // Debug.Log("--------------- Minion Monster ---------------------");
+        // Debug.Log("Minions Health = " + GameManager.instance.MinionMonster.health);
+        // Debug.Log("Minions Armor = " + GameManager.instance.MinionMonster.armor);
+        // Debug.Log("Minions Spawn = " + GameManager.instance.MinionMonster.spawnCount);
+        // Debug.Log("--------------- Shama Monster ---------------------");
+        // Debug.Log("Shama Health = " + GameManager.instance.ShamaMonster.health);
+        // Debug.Log("Shama Armor = " + GameManager.instance.ShamaMonster.armor);
+        // Debug.Log("Shama Spawn = " + GameManager.instance.ShamaMonster.spawnCount);
 
     }
 

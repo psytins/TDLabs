@@ -26,7 +26,7 @@ public class Enemy : EnemyMovement
                 this.speed = this.speed - (this.speed * 0.05f); //Slow enemy by 5% for each hit
                 break;
         }
-        if(health <= 0.0f)
+        if(health < 1f)
         {
             //Retirar da Enemy Queue
             enemyTurret.GetComponent<Turret>().enemyQueue.Remove(this.gameObject);
