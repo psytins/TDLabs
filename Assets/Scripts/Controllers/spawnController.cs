@@ -336,8 +336,8 @@ public class spawnController : MonoBehaviour
         //Debug Area --------------------------------------------------------------------------------------------------------------------
         Debug.Log("--------------- Wave number " + GameManager.instance.currentWave + " ---------------------");
         Debug.Log("Health Loss = " + healthLoss);
-        Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP); //Bug ? 
-        Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP); //Bug ?
+        Debug.Log("Enemies Health Total = " + GameManager.instance.enemyTotalHP);
+        Debug.Log("Enemies Health Acc = " + GameManager.instance.enemyAccumHP); 
         Debug.Log("Enemies Health Remaining = " + EHR + "%");
         // Debug.Log("Bonus Gold = " + GameManager.instance.BonusGold);
         Debug.Log("New EPT = " + GameManager.instance.EPT);
